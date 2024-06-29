@@ -24,6 +24,7 @@ const config = {
       },
       colors: {
         postared: "#ED1B24",
+        postawhite: "#ECECEC",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
