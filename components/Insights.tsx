@@ -8,12 +8,12 @@ const Insights = () => {
     <Container>
       <div className="flex flex-col items-center">
         <div className="my-10 text-center">
-          <h2 className="text-sm text-postared">News, Updates & Insights</h2>
-          <h3 className="font-semibold text-xl">
+          <h2 className="text-postared text-[14px] font-[700px]">News, Updates & Insights</h2>
+          <h3 className="text-[24px] font-[600px]">
             Catch up on the latest happenings at Posta Uganda
           </h3>
         </div>
-        <div className="grid grid-cols-3 gap-10">
+        <div className="flex flex-col md:grid grid-cols-3 gap-10">
           {insights.map(({ image, title, description }) => (
             <div key="title">
               <InsightCard

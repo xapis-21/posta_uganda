@@ -33,7 +33,7 @@ const Services = () => {
   ];
   return (
     <Container>
-      <div className="py-20 rounded-[20px] bg-postablack flex justify-between px-4">
+      <div className="py-20 rounded-[20px] bg-postablack flex flex-col md:flex-row items-center gap-10 md:gap-20 justify-between px-4 mt-10">
         {services.map(({ service, description, link, CallToAction }) => (
           <FeaturedServiceCard
             service={service}

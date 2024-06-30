@@ -14,11 +14,11 @@ const FeaturedServiceCard = ({
   CallToAction: string;
 }) => {
   return (
-    <div className="max-w-[360px] text-white text-center px-8">
+    <div className="max-w-[360px] text-white text-center">
       <h2 className="font-[500px] text-[14px]">{service}</h2>
-      <h3 className="my-10 font-[600px] text-[24px]">{description}</h3>
+      <h3 className="my-4 md:my-10 font-[600px] text-[24px] line-clamp-3">{description}</h3>
       <Link href={link}>
-        <Button variant={"outline"} className="bg-transparent font-[500px] text-[14]">
+        <Button variant={"outline"} className="bg-transparent font-[500px] text-xs">
           {CallToAction}
         </Button>
       </Link>

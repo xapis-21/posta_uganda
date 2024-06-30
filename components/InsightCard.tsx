@@ -9,7 +9,7 @@ const InsightCard = ({
   description: string;
 }) => {
   return (
-    <div className="max-w-96">
+    <div className="max-w-[352px]">
       <Image
         src={
           image
@@ -17,7 +17,7 @@ const InsightCard = ({
         alt={""}
         width={1000}
         height={1000}
-        className="rounded-lg h-48 object-cover"
+        className="rounded-[20px] h-[200px]  object-cover"
       />
       <h3 className="font-semibold pt-2 pb-4 line-clamp-2">
         {title}
