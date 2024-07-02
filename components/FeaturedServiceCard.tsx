@@ -24,7 +24,7 @@ const FeaturedServiceCard: React.FC<FeaturedServiceCardProps> = ({
   buttonText,
 }) => {
   return (
-    <Card className="w-full max-w-[360px] flex flex-col items-center gap-8 bg-transparent border-none rounded-apple-xl hover:bg-foreground/50 cursor-pointer duration-300 transition group">
+    <Card className="w-full md:max-w-[360px] flex flex-col items-center gap-8 bg-transparent border-none rounded-apple-xl hover:bg-foreground/50 cursor-pointer duration-300 transition group">
       <CardHeader>
         <CardTitle className="font-medium text-sm text-center text-card">
           {title}
