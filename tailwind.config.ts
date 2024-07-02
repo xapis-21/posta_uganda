@@ -23,9 +23,6 @@ const config = {
         title: "var(--font-title)",
       },
       colors: {
-        postared: "#ED1B24",
-        postawhite: "#ECECEC",
-        postablack: "#1E1E1E",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

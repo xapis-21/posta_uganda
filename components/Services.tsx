@@ -4,47 +4,50 @@ import Container from "./Container";
 
 const Services = () => {
   const services: {
-    service: string;
+    title: string;
     description: string;
     link: string;
-    CallToAction: string;
+    buttonText: string;
   }[] = [
     {
-      service: "Postal Adresses",
+      title: "Postal Addresses",
       description:
         "Secure and accessible physical and virtual postal addresses for all your mail",
-      link: "",
-      CallToAction: "Apply now",
+      link: "/postal-addresses",
+      buttonText: "Apply now",
     },
     {
-      service: "Mail & Parcel Delivery",
+      title: "Mail & Parcel Delivery",
       description:
         "Send and receive mail and parcels with confidence, locally and globally.",
-      link: "",
-      CallToAction: "Send a Package Now",
+      link: "/mail-parcel-delivery",
+      buttonText: "Send a Package Now",
     },
     {
-      service: "Express Services",
+      title: "Express Services",
       description:
         "Swift express delivery to ensure your urgent parcels arrive on time.",
-      link: "",
-      CallToAction: "Book EMS Service",
+      link: "/express-services",
+      buttonText: "Book EMS Service",
     },
   ];
+
   return (
-    <Container>
-      <div className="py-20 rounded-[20px] bg-postablack flex flex-col md:flex-row items-center gap-10 md:gap-20 justify-between px-4 mt-10">
-        {services.map(({ service, description, link, CallToAction }) => (
-          <FeaturedServiceCard
-            service={service}
-            description={description}
-            link={link}
-            CallToAction={CallToAction}
-            key={CallToAction}
-          />
-        ))}
-      </div>
-    </Container>
+    <section className="py-10">
+      <Container>
+        <div className="py-20 rounded-apple-xl bg-secondary-foreground flex flex-col md:flex-row items-center gap-4 md:gap-10 justify-center px-2 md:px-8 ">
+          {services.map(({ title, description, link, buttonText }) => (
+            <FeaturedServiceCard
+              title={title}
+              description={description}
+              link={link}
+              buttonText={buttonText}
+              key={title}
+            />
+          ))}
+        </div>
+      </Container>
+    </section>
   );
 };
 
