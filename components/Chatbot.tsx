@@ -16,8 +16,7 @@ const Chatbot: React.FC = () => {
   const handleSend = () => {
     if (input.trim()) {
       setMessages([...messages, { text: input, isUser: true }]);
-      // Here you would typically send the message to your AI service
-      // and get a response. For now, we'll just echo the message back.
+    
       setTimeout(() => {
         setMessages((prev) => [
           ...prev,
