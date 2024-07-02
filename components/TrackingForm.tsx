@@ -59,6 +59,7 @@ export function TrackingForm() {
                       placeholder="Enter tracking number"
                       {...field}
                       className="pl-10 pr-4 py-2 w-full border-none shadow-none bg-secondary rounded-l-full rounded-r-none focus-visible:ring-0 focus:border-transparent"
+                      autoComplete="off"
                     />
                   </div>
                 </FormControl>

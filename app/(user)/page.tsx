@@ -1,9 +1,13 @@
+
 import About from "@/components/About";
 import Chatbot from "@/components/Chatbot";
+import EPostaSection from "@/components/EPostaServices";
 import FAQSection from "@/components/FAQSetion";
 import Hero from "@/components/Hero";
 import Insights from "@/components/Insights";
+import MetricsSection from "@/components/MetricsSection";
 import Services from "@/components/Services";
+import TestimonialsSection from "@/components/TestimonialSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -12,9 +16,12 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
+      <EPostaSection />
+      <MetricsSection/>
       <Insights />
+      <TestimonialsSection />
       <FAQSection />
-      <Chatbot />
+      {/* <Chatbot /> */}
     </main>
   );
 }

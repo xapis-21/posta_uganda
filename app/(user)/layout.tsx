@@ -4,11 +4,15 @@ import "@/app/globals.css";
 import Header from "@/components/ Header";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
+// import { AI } from "../actions/bot";
+
+// export const dynamic = "force-dynamic";
+// export const maxDuration = 30;
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-title"
+  variable: "--font-title",
 });
 
 const manrope = Manrope({
@@ -16,7 +20,6 @@ const manrope = Manrope({
   weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
 });
-
 
 export const metadata: Metadata = {
   title: "Posta Uganda",
@@ -32,7 +35,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(rajdhani.variable, manrope.variable, "font-sans")}>
         <Header />
-        {children}
+        {/* <AI> */}
+          {children}
+        {/* </AI> */}
         <Footer />
       </body>
     </html>
