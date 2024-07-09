@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={cn(rajdhani.variable, manrope.variable, "font-sans")}>
         <Header />
         {/* <AI> */}
-          {children}
+        <main className="min-h-screen w-full overflow-hidden">{children}</main>
         {/* </AI> */}
         <Footer />
       </body>

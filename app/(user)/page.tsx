@@ -1,14 +1,13 @@
 
 import About from "@/components/About";
-import Chatbot from "@/components/Chatbot";
+
 import EPostaSection from "@/components/EPostaServices";
-import FAQSection from "@/components/FAQSetion";
+import FAQSection from "@/components/FAQSection";
 import Hero from "@/components/Hero";
 import Insights from "@/components/Insights";
 import MetricsSection from "@/components/MetricsSection";
 import Services from "@/components/Services";
 import TestimonialsSection from "@/components/TestimonialSection";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
       <Insights />
       <TestimonialsSection />
       <FAQSection />
-      {/* <Chatbot /> */}
     </main>
   );
 }

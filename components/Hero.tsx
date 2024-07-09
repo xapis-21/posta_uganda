@@ -3,11 +3,11 @@ import Image from "next/image";
 import Container from "./Container";
 import { TrackingForm } from "./TrackingForm";
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
     <section className="w-full min-h-[624px] bg-background py-10 pt-40 md:pt-20 flex items-center ">
       <Container>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 h-full ">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10 h-full ">
           <div className="flex flex-col items-start max-w-full md:max-w-[437px] text-center md:text-left">
             <div className="inline-flex items-center justify-center gap-4 px-2 py-1 bg-accent rounded-full border border-secondary mb-4 mx-auto md:mx-0">
               <p className="text-muted-foreground text-xs font-medium">
@@ -21,11 +21,11 @@ const Hero: React.FC = () => {
               Track your package, send mail, or access our wide range of
               services.
             </p>
-            <div className="w-full max-w-md">
+            <div className="w-full max-w-md mt-12">
               <TrackingForm />
             </div>
           </div>
-          <div className="relative w-full max-w-[500px] h-[400px] mt-10 md:mt-0">
+          <div className="relative w-full max-w-[500px] h-[600px] mt-10 md:mt-0">
             <Image
               src="/images/hero-image.png"
               alt="Posta Uganda Services"

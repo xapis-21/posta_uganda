@@ -16,6 +16,7 @@ import {
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import MobileMenu from "./MobileMenu";
+import { usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,13 +33,17 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
+  const pathname = usePathname();
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 w-full transition-all duration-300 z-50",
         isScrolled
           ? "py-2 bg-background/80 backdrop-blur-xl border-b border-border"
-          : "py-6"
+          : "py-6",
+        pathname != "/" &&
+          " bg-secondary/95 py-2 backdrop-blur-xl"
       )}
     >
       <Container>
@@ -60,7 +65,7 @@ const Header: React.FC = () => {
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/about" legacyBehavior passHref>
+                <Link href="/about-posta" legacyBehavior passHref>
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),

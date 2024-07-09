@@ -19,7 +19,7 @@ const faqs = [
       "A Physical Box Address is a Postal Address where you are given a key for your box. This Postal Address is also linked to your phone, email and your account online, allowing you to receive instant notifications and monitor your box transactions.",
   },
   {
-    question: "What is an eBox Address?",
+    question: "What is an eAddress?",
     answer:
       "An eBox Postal Address is an Electronic Postal Address that allows you to access your mails 24/7 from the convenience of your smartphone and any other electronic device.",
   },
@@ -35,7 +35,7 @@ const faqs = [
   },
 ];
 
-const FAQSection: React.FC = () => {
+const FAQSection = () => {
   return (
     <section className="py-20 bg-secondary-foreground w-full">
       <Container>
@@ -52,7 +52,7 @@ const FAQSection: React.FC = () => {
         >
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left text-secondary">
+              <AccordionTrigger className="text-left text-secondary hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-secondary/80">
