@@ -42,8 +42,7 @@ const Header: React.FC = () => {
         isScrolled
           ? "py-2 bg-background/80 backdrop-blur-xl border-b border-border"
           : "py-6",
-        pathname != "/" &&
-          " bg-secondary/95 py-2 backdrop-blur-xl"
+        pathname != "/" && " bg-secondary/95 py-2 backdrop-blur-xl"
       )}
     >
       <Container>
@@ -178,6 +177,18 @@ const Header: React.FC = () => {
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/posta-careers" legacyBehavior passHref>
+                  <NavigationMenuLink
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      buttonVariants({ variant: "ghost" })
+                    )}
+                  >
+                    Careers
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
