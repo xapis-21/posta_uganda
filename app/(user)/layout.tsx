@@ -33,10 +33,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(rajdhani.variable, manrope.variable, "font-sans")}>
+      <body className={cn(rajdhani.variable, manrope.variable, "font-sans min-h-screen flex flex-col justify-between")}>
         <Header />
         {/* <AI> */}
-        <main className="min-h-screen w-full overflow-hidden">{children}</main>
+        <main className="w-full overflow-hidden">{children}</main>
         {/* </AI> */}
         <Footer />
       </body>

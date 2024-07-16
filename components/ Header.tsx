@@ -152,31 +152,34 @@ const Header: React.FC = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <ListItem href="/track" title="Track a Package">
+                    <ListItem
+                      href="https://www.eposta.ug/web"
+                      title="Track a Package"
+                      // target="blank"
+                    >
                       Monitor your shipment's journey in real-time
                     </ListItem>
-                    <ListItem href="/eposta" title="ePosta Login/Register">
+                    <ListItem
+                      href="https://www.eposta.ug/web/register"
+                      title="ePosta Login/Register"
+                      // target="blank"
+                    >
                       Access your digital postal services account
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger
-                  className={cn(buttonVariants({ variant: "ghost" }))}
-                >
-                  News & Media
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <ListItem href="/blog" title="Blog">
-                      Stay updated with our latest news and articles
-                    </ListItem>
-                    <ListItem href="/gallery" title="Image Gallery">
-                      Visual showcase of our services and events
-                    </ListItem>
-                  </ul>
-                </NavigationMenuContent>
+                <Link href="/insights" legacyBehavior passHref>
+                  <NavigationMenuLink
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      buttonVariants({ variant: "ghost" })
+                    )}
+                  >
+                   New & media
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/posta-careers" legacyBehavior passHref>
@@ -204,7 +207,7 @@ const Header: React.FC = () => {
               Contact Us
             </Link>
             <Link
-              href="/register"
+              href="https://www.eposta.ug/web/register"
               className={cn(
                 buttonVariants({ variant: "default", size: "sm" }) as string,
                 "bg-primary text-primary-foreground hover:bg-primary/90"
