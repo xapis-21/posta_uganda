@@ -19,15 +19,15 @@ const partners = [
 
 const PartnersSection= () => {
   return (
-    <section className="bg-background w-full">
+    <section className="bg-background w-full pb-12">
       <Container>
         <h2 className="text-primary text-sm font-bold text-center mb-2">
           Our Partners
         </h2>
-        <h3 className="text-3xl font-semibold text-center mb-12">
-         Partnering with leading organizations
+        <h3 className="text-3xl font-semibold text-center mb-8">
+          Partnering with leading organizations
         </h3>
-        <div className="w-full grid grid-cols-3 md:flex flex-row flex-wrap gap-4  items-center">
+        <div className="w-full grid grid-cols-3 md:grid-cols-5 flex-row flex-wrap gap-4  items-center">
           {partners.map((partner, index) => (
             <div
               key={index}

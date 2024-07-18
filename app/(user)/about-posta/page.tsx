@@ -12,7 +12,7 @@ const AboutPage = () => {
     <div className="w-full pt-12 bg-background">
       <section>
         <Container>
-          <div className="w-full pt-12 md:pt-20">
+          <div className="w-full pt-12 ">
             <div className="space-y-2">
               <h1 className="self-stretch font-bold text-primary text-sm">
                 About us
@@ -127,7 +127,7 @@ const AboutPage = () => {
           </div>
         </Container>
       </section>
-      <section className="py-20">
+      <section className="py-12">
         <Container>
           <div className="w-full">
             <div className="flex flex-col md:flex-row md:justify-center gap-20 items-center px-4 md:px-0">
@@ -169,7 +169,7 @@ const AboutPage = () => {
           </div>
         </Container>
       </section>
-      <section className="py-20">
+      <section className="pt-12 pb-20">
         <Container>
           <div className="w-full">
             <div className="flex flex-col md:flex-row-reverse md:justify-center gap-20 items-center px-4 md:px-0">
@@ -190,7 +190,7 @@ const AboutPage = () => {
                   to the right place.
                 </p>
                 <div className="w-[185px] pt-3">
-                  <Link href="/about">
+                  <Link href="/posta-careers">
                     <Button
                       variant="default"
                       className="bg-secondary-foreground text-secondary font-medium text-sm w-full"
