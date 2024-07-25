@@ -4,9 +4,9 @@ import FAQSection from "@/components/FAQSection";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export const metadata = {
-  title: "Contact CPAF",
+  title: "Contact Posta Uganda",
   description:
-    "Get in touch with CPAF today. We are here to answer your questions, provide insights, and explore how we can work together to achieve your company objectives.",
+    "Get in touch with We are here to answer your questions, provide insights, and explore how we can work together to achieve your company objectives.",
 };
 
 const page = () => {
