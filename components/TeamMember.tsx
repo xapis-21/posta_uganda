@@ -17,7 +17,7 @@ const TeamMember = ({
           height={300}
           width={300}
           alt=""
-          className="rounded-apple-lg h-full w-full object-cover object-center"
+          className="rounded-2xl h-full w-full object-cover object-center"
         />
       </div>
       <div className="flex flex-col items-center">

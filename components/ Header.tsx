@@ -41,7 +41,7 @@ const Header: React.FC = () => {
       className={cn(
         "fixed top-0 left-0 w-full transition-all duration-300 z-50",
         isScrolled ? "py-2 bg-white-100/90 backdrop-blur-xl shadow-sm" : "py-6",
-        pathname != "/" && " bg-white-100/90 py-2 backdrop-blur-xl"
+        pathname != "/" && " bg-white-100/90 py-2 backdrop-blur-xl shadow-sm"
       )}
     >
       <Container>
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
               alt="Posta Uganda Logo"
               width={146}
               height={30}
-              className={`object-contain w-auto ${isScrolled ? "h-12" : "md:h-20 h-12"}`}
+              className={`object-contain w-auto ${isScrolled || pathname != "/" ? "h-12" : "md:h-20 h-12"}`}
             />
           </Link>
 
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
                 >
                   Services
                 </NavigationMenuTrigger>
-             
+
                 <NavigationMenuContent className="bg-white-100 border-none ring-0 shadow-lg">
                   <ul className="grid gap-2 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-4">
@@ -114,9 +114,16 @@ const Header: React.FC = () => {
                     >
                       Modern banking and money transfer solutions
                     </ListItem>
-                   <Link href={"/posta-services"} className={cn(buttonVariants({variant:"neutral"}), "flex items-center gap-2 text-xs bg-white-10/40")}>
-                      Explore all our services <ArrowRight className="h-4 w-4"/>
-                   </Link>
+                    <Link
+                      href={"/posta-services"}
+                      className={cn(
+                        buttonVariants({ variant: "neutral" }),
+                        "flex items-center gap-2 text-xs bg-white-10/40"
+                      )}
+                    >
+                      Explore all our services{" "}
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>

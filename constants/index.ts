@@ -290,3 +290,81 @@ export const faqs = [
       "To receive items from abroad, you'll typically follow these steps, ensure you have a valid and complete postal address where items can be delivered. This includes your name, city, country and telephone number.",
   },
 ];
+
+export const team = [
+  {
+    name: "Balyejjusa Sulaiman Kirunda",
+    role: "Chairman Board of Directors",
+    image: "/images/team/2.png",
+  },
+  {
+    name: "Niyitegeka Micheal",
+    role: "Board Member",
+    image: "/images/team/7.jpg",
+  },
+  {
+    name: "Masika Sedress Kalengyo",
+    role: "Board Member",
+    image: "/images/team/5.jpg",
+  },
+  {
+    name: "Rwakimari Beatrice",
+    role: "Board Member",
+    image: "/images/team/6.jpg",
+  },
+  {
+    name: "Kashillingi Hussein Rugaba",
+    role: "Board Member",
+    image: "/images/team/3.png",
+  },
+  {
+    name: "Arinaitwe James",
+    role: "Managing Director",
+    image: "/images/team/1.jpg",
+  },
+  {
+    name: "Rosset Atukunda",
+    role: "Head of HR and ADMIN",
+    image: "/images/team/avatar.jpg",
+  },
+  {
+    name: "Assimwe Robert",
+    role: "Head Of Finance",
+    image: "/images/team/avatar.jpg",
+  },
+  {
+    name: "Charles Owora",
+    role: "Company Secretary",
+    image: "/images/team/avatar.jpg",
+  },
+  {
+    name: "Kyarikunda Diana",
+    role: "Manager HR and Admin",
+    image: "/images/team/avatar.jpg"
+  },
+  {
+    name: "Micheal Malika",
+    role: "Manager IT",
+    image: "/images/team/avatar.jpg",
+  },
+  {
+    name: "Mucunguzi Frank",
+    role: "Manager EMS",
+    image: "/images/team/avatar.jpg"
+  },
+  {
+    name: "Immaculate Namunyolo",
+    role: "Manager Mail Operations",
+    image: "/images/team/avatar.jpg"
+  },
+  {
+    name: "Daraus Muhwezi JIM",
+    role: "Manager CSC",
+    image: "/images/team/avatar.jpg"
+  },
+  {
+    name: "Kyoobe Augustine",
+    role: "Manager Internal Audit",
+    image: "/images/team/avatar.jpg"
+  },
+];
