@@ -28,21 +28,21 @@ const InsightCard = ({
   className,
 }: InsightCardProps) => {
   return (
-    <Card className="max-w-[352px] overflow-hidden shadow-none">
+    <Card className="max-w-[360px] overflow-hidden shadow-none border-none">
       <CardHeader className="p-0">
         <Image
           src={imageUrl || ""}
           alt={title}
           width={352}
           height={200}
-          className="h-[200px] w-full object-cover rounded-t-apple-lg "
+          className="h-[200px] w-full object-cover rounded-2xl "
         />
       </CardHeader>
-      <CardContent className="p-4">
-        <CardTitle className="font-semibold text-foreground text-lg mb-2 line-clamp-2">
+      <CardContent className="p-0 mt-4">
+        <CardTitle className="font-normal text-black-10 text-base mb-2 line-clamp-2 ">
           {title}
         </CardTitle>
-        <p className="text-sm text-muted-foreground line-clamp-3">{excerpt}</p>
+        {/* <p className="text-xs text-black-10/60 line-clamp-2">{excerpt}</p> */}
       </CardContent>
     </Card>
   );

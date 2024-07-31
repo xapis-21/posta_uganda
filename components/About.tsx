@@ -3,45 +3,58 @@ import React from "react";
 import Container from "./Container";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { CheckCheck } from "lucide-react";
 
 const About = () => {
   return (
-    <section className="py-10 w-full">
+    <section className="py-16 pt-20 w-full">
       <Container>
-        <div className="rounded-apple-xl bg-secondary w-full">
-          <div className="flex flex-col md:flex-row md:justify-center gap-20 items-center py-20 px-4 md:px-0">
-            <div className="w-full max-w-[420px] flex flex-col items-start gap-[17px]">
-              <div className="self-stretch w-full flex flex-col items-start">
-                <h2 className="self-stretch font-bold text-primary text-sm">
-                  About us
-                </h2>
-                <h3 className="self-stretch font-semibold text-foreground text-2xl mt-1">
+        <div className="w-full">
+          <div className="flex flex-col md:flex-row-reverse md:justify-between gap-12 md:gap-20 items-center px-4 md:px-0">
+            <div className="w-full max-w-[520px] flex-shrink-0 flex flex-col items-start gap-[20px]">
+              <div className="w-full flex flex-col items-start">
+                <h2 className="font-bold text-primary text-base">About us</h2>
+                <h3 className=" font-semibold text-black-10 text-4xl">
                   Serving Uganda since 1951
                 </h3>
               </div>
-              <p className="self-stretch h-20 font-normal text-muted-foreground text-sm">
-                Posta Uganda connects the nation through a blend of traditional
-                postal services and innovative digital solutions. Our mission is
-                to bridge distances and support Uganda's growth, one delivery at
-                a time.
+              <p className=" font-light text-black-10 text-lg">
+                Posta Uganda is the most extensive provider of postal services
+                in Uganda, having an extensive network of postal delivery
+                outlets down to the sub-county level.
               </p>
-              <div className="w-[185px] pt-3">
-                <Link href="/about">
-                  <Button
-                    variant="default"
-                    className="bg-secondary-foreground text-secondary font-medium text-sm w-full"
-                  >
-                    Learn more
-                  </Button>
-                </Link>
+              <div className="mt-4 text-black-10/80">
+                <h3 className="text-base mb-4">
+                  As a trusted partner in communication and logistics, we offer:
+                </h3>
+                <ul className="">
+                  <li className="mb-2 flex gap-2 items-center border-b-[.5px] border-b-white-10 text pb-4">
+                    <CheckCheck className="text-primary/50" />
+                    Secure and efficient mail and parcel delivery
+                  </li>
+                  <li className="mb-2 flex gap-2 items-center border-b-[.5px] border-b-white-10 text pb-4">
+                    <CheckCheck className="text-primary/50" />
+                    Digital postal addresses for the modern era
+                  </li>
+                  <li className="mb-2 flex gap-2 items-center pb-4 text">
+                    <CheckCheck className="text-primary/50" />
+                    Financial services for seamless transactions
+                  </li>
+                </ul>
               </div>
+              {/* <div className="w-[185px] pt-3">
+                <Link href="/about">
+                  <Button variant="secondary">Learn more</Button>
+                </Link>
+              </div> */}
             </div>
             <Image
-              src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              src="/images/about-posta.jpeg"
               alt="Posta Uganda Service"
-              width={469}
-              height={262}
-              className="rounded-apple-lg object-cover"
+              width={600}
+              height={600}
+              draggable={false}
+              className="rounded-2xl h-[280px] md:h-[480px] w-full object-cover shadow-xl flex-grow"
             />
           </div>
         </div>

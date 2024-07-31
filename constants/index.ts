@@ -191,3 +191,102 @@ export const insightsarr = [
     slug: "historic-post-offices",
   },
 ];
+
+
+export const metrics = [
+  { value: "300+", label: "Post Offices" },
+  { value: "1M+", label: "Packages Delivered" },
+  { value: "1000+", label: "Customers daily" },
+  { value: "70K+", label: "Active Mailboxes" },
+];
+
+
+export const testimonials = [
+  {
+    quote:
+      "Posta Uganda's ePosta service has revolutionized how I manage my mail. It's so convenient!",
+    author: "Sarah Namukasa",
+    title: "Small Business Owner",
+  },
+  {
+    quote:
+      "The tracking feature is incredibly accurate. I always know where my packages are.",
+    author: "John Okello",
+    title: "Online Shopper",
+  },
+  {
+    quote:
+      "As a company, we've seen significant improvements in our mail management with Posta Uganda.",
+    author: "Emily Akello",
+    title: "Corporate Client",
+  },
+  {
+    quote:
+      "The new digital services have made it so easy to manage my postal needs from anywhere.",
+    author: "David Mutua",
+    title: "Frequent Traveler",
+  },
+  {
+    quote:
+      "The tracking feature is incredibly accurate. I always know where my packages are.",
+    author: "John Okello",
+    title: "Online Shopper",
+  },
+  {
+    quote:
+      "As a company, we've seen significant improvements in our mail management with Posta Uganda.",
+    author: "Emily Akello",
+    title: "Corporate Client",
+  },
+  {
+    quote:
+      "The new digital services have made it so easy to manage my postal needs from anywhere.",
+    author: "David Mutua",
+    title: "Frequent Traveler",
+  },
+  {
+    quote:
+      "I appreciate the quick and friendly service at my local post office. Always a pleasure!",
+    author: "Grace Namutebi",
+    title: "Retired Teacher",
+  },
+  {
+    quote:
+      "Posta Uganda's commitment to innovation is commendable. They're truly modernizing postal services.",
+    author: "Robert Kizza",
+    title: "Tech Entrepreneur",
+  },
+];
+
+
+export const faqs = [
+  {
+    question: "How do I open a Postal Address?",
+    answer:
+      "Opening a postal address typically refers to obtaining a physical address where you can receive mail and packages, go to a nearby post office make payment and one shall be created for you on the other hand this can be done on our website by clicking postal address and filling in an application online.",
+  },
+  {
+    question: "How much is a Postal address?",
+    answer:
+      "The cost of a postal address can vary depending on several factors like size, owner and location, a physical postal address is shs. 90,000 for an individual and shs. 20,000 for an e-address whereas, a company pays shs. 90,000 for a standard physical address and shs. 70,000 for an e-address ",
+  },
+  {
+    question: "What is an E-Address?",
+    answer: `An "e-address" typically refers to an electronic address or an email address. It's a unique identifier that allows electronic messages to be sent to and received by a specific individual or organization over the internet.`,
+  },
+  {
+    question: "How much is sending an item to the UK?",
+    answer:
+      "The cost of sending an item to the UK can vary widely depending on several factors; Weight and Size: The postage cost is often determined by the weight and dimensions of the item being sent. Heavier or larger items typically cost more to send.Additional Services: If you require additional services such as tracking, insurance, or signature confirmation, these may add to the overall cost.",
+  },
+  {
+    question: "How long does sending an item to the USA take?",
+    answer:
+      "Posta Uganda offers two kinds of postal services that is,Express Mail Service (EMS) that typically delivers within 5-10 business days and Standard International Mail where delivery can range from 14-21 business days or more, depending on the destination.",
+  },
+  {
+    question: "How can I recieve an Item from abroad",
+    answer:
+      "To receive items from abroad, you'll typically follow these steps, ensure you have a valid and complete postal address where items can be delivered. This includes your name, city, country and telephone number.",
+  },
+];

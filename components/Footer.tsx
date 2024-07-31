@@ -1,126 +1,40 @@
 import React from "react";
-import Container from "./Container";
 import Link from "next/link";
-import Image from "next/image";
 import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+  BsFacebook,
+  BsInstagram,
+  BsLinkedin,
+  BsTiktok,
+  BsTwitterX,
+  BsYoutube,
+} from "react-icons/bs";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { ExternalLink } from "lucide-react";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className="bg-secondary py-16">
-      <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          <div>
-            <Image
-              src="/logo/logo-wide.png"
-              alt="Posta Uganda Logo"
-              width={146}
-              height={30}
-              className="mb-4"
-            />
-            <p className="text-sm text-muted-foreground mb-4">
-              Connecting Uganda through innovative postal and financial
-              solutions.
-            </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://facebook.com/postaug"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://twitter.com/postaug"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="https://instagram.com/postaug"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href="https://linkedin.com/company/posta-uganda"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <FaLinkedinIn />
-              </a>
-            </div>
+    <footer className="bg-black-100 text-white-10/80">
+      <div className="container mx-auto px-4 pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="max-w-sm">
+            <Link href="/" className="text-2xl font-bold text-pav-sky">
+              <Image
+                src={"/logo/logo.png"}
+                alt=""
+                width={100}
+                height={40}
+                className={cn("h-32 w-auto object-contain")}
+              />
+            </Link>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 text-sm">ePosta Services</h4>
-            <ul className="space-y-2 text-xs">
-              <li>
-                <Link
-                  href="/eposta/box"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  eBox Postal Address
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/eposta/physical"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Physical Postal Address
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/eposta/renew"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Renew Postal Address
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/eposta/delivery"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Request For Delivery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/eposta/track"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Track Your Items
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/eposta/update"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Update Your Postal Address Details
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-4 text-sm">Site Map</h4>
-            <ul className="space-y-2 text-xs">
-              <li>
-                <Link
-                  href="/"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Home
-                </Link>
-              </li>
+            <h3 className="font-medium mb-4">Quick Links</h3>
+            <ul className="space-y-2">
               <li>
                 <Link
                   href="/about"
-                  className="text-muted-foreground hover:text-primary"
+                  className="hover:text-white-10 text-sm transition-colors"
                 >
                   About Us
                 </Link>
@@ -128,72 +42,121 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   href="/services"
-                  className="text-muted-foreground hover:text-primary"
+                  className="hover:text-white-10  text-sm transition-colors"
                 >
-                  Services
+                  Our Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/track"
-                  className="text-muted-foreground hover:text-primary"
+                  href="/rentals"
+                  className="hover:text-white-10  text-sm transition-colors"
+                >
+                  News & media
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-white-10 text-sm transition-colors"
+                >
+                  Careers
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-medium mb-4">Customer support</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-white text-pav-100 text-sm transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/"
+                  className="hover:text-white text-pav-100 text-sm transition-colors"
                 >
                   Track & Trace
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/news"
-                  className="text-muted-foreground hover:text-primary"
+                  href="/"
+                  className="hover:text-white text-pav-100 text-sm transition-colors"
                 >
-                  News & Media
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Contact Us
+                  Find a Post Office
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 text-sm">Contact Information</h4>
-            <ul className="space-y-2 text-xs">
-              <li className="text-muted-foreground">
-                Plot 35, Kampala Road, Kampala, Uganda
+            <h3 className="font-medium mb-4">Follow us</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-white-10 flex items-center gap-2 text-sm transition-colors"
+                >
+                  X (formerly Twitter) <ExternalLink className="h-3 w-3" />
+                </Link>
               </li>
               <li>
-                <a
-                  href="tel:+256414231707"
-                  className="text-muted-foreground hover:text-primary"
+                <Link
+                  href="/services"
+                  className="hover:text-white-10 flex items-center gap-2  text-sm transition-colors"
                 >
-                  +256 41 4231707
-                </a>
+                  Instagram <ExternalLink className="h-3 w-3" />
+                </Link>
               </li>
               <li>
-                <a
-                  href="mailto:info@ugapost.co.ug"
-                  className="text-muted-foreground hover:text-primary"
+                <Link
+                  href="/rentals"
+                  className="hover:text-white-10 flex items-center gap-2  text-sm transition-colors"
                 >
-                  info@ugapost.co.ug
-                </a>
+                  Linked In <ExternalLink className="h-3 w-3" />
+                </Link>
               </li>
+            
             </ul>
           </div>
+          <div>
+            <h3 className="font-medium mb-4">Get in touch</h3>
+            <p className="text-sm text-pav-100 hover:text-white">
+              Plot 35, Kampala Road
+            </p>
+            <p className="text-sm text-pav-100 hover:text-white">
+              P.O Box 7106, Kampala, Uganda
+            </p>
+            <p className="text-sm text-pav-100 hover:text-white">
+              Phone: 256-414-255511/5
+            </p>
+            <p className="text-sm text-pav-100 hover:text-white">
+              Whatsapp: 0741566374
+            </p>
+            <p className="text-sm text-pav-100 hover:text-white">
+              Email:{" "}
+              <a href="mailto:inquiries@ugapost.co.ug">
+                inquiries@ugapost.co.ug
+              </a>{" "}
+              or{" "}
+              <a href="mailto:customercare@ugapost.com">
+                customercare@ugapost.com
+              </a>
+            </p>
+          </div>
         </div>
-        <div className="border-t border-muted pt-8 text-center">
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Posta Uganda. All rights reserved.
-          </p>
-          <p className="text-xs text-muted-foreground mt-2">
-            Posta Uganda, formerly known as Uganda Post Limited, has been at the
-            forefront of Uganda's postal and communication landscape since 1951.
+        <div className="mt-8 py-6 flex items-center justify-center border-t border-white-10/10 text-white-10/60">
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()} Posta Uganda
           </p>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 };

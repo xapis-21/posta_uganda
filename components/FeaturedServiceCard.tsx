@@ -24,29 +24,25 @@ const FeaturedServiceCard: React.FC<FeaturedServiceCardProps> = ({
   buttonText,
 }) => {
   return (
-    <Card className="w-full md:max-w-[360px] flex flex-col items-center gap-8 bg-transparent border-none rounded-apple-xl hover:bg-foreground/50 cursor-pointer duration-300 transition group">
-      <CardHeader>
-        <CardTitle className="font-medium text-sm text-center text-card">
+    <div className="h-[320px] w-[360px]  bg-black-10 border-none rounded-2xl cursor-pointer duration-300 grid place-items-center transition group p-6">
+      <CardContent className="flex flex-col items-center gap-8">
+        <CardTitle className="font-medium text-sm text-center text-card text-white-10">
           {title}
         </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-xl text-center text-card line-clamp-3">
+        <p className="text-xl text-center text-white-10 text-card line-clamp-3">
           {description}
         </p>
-      </CardContent>
-      <CardFooter>
         <Link
           href={link}
           className={cn(
             buttonVariants({ variant: "outline", size: "sm" }),
-            "group-hover:bg-accent group-hover:text-accent-foreground"
+            "border-white-10/80 text-white-10/80 hover:bg-white-10 hover:text-black-10"
           )}
         >
           {buttonText}
         </Link>
-      </CardFooter>
-    </Card>
+      </CardContent>
+    </div>
   );
 };
 

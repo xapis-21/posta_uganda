@@ -11,12 +11,13 @@ import {
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList,
+  NavigationMenuList,NavigationMenuIndicator,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import MobileMenu from "./MobileMenu";
 import { usePathname } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,21 +40,19 @@ const Header: React.FC = () => {
     <header
       className={cn(
         "fixed top-0 left-0 w-full transition-all duration-300 z-50",
-        isScrolled
-          ? "py-2 bg-background/80 backdrop-blur-xl border-b border-border"
-          : "py-6",
-        pathname != "/" && " bg-secondary/95 py-2 backdrop-blur-xl"
+        isScrolled ? "py-2 bg-white-100/90 backdrop-blur-xl shadow-sm" : "py-6",
+        pathname != "/" && " bg-white-100/90 py-2 backdrop-blur-xl"
       )}
     >
       <Container>
         <nav className="flex items-center justify-between">
           <Link href="/">
             <Image
-              src="/logo/logo-wide.png"
+              src="/logo/logo.png"
               alt="Posta Uganda Logo"
               width={146}
               height={30}
-              className="object-contain"
+              className={`object-contain w-auto ${isScrolled ? "h-12" : "md:h-20 h-12"}`}
             />
           </Link>
 
@@ -81,94 +80,59 @@ const Header: React.FC = () => {
                 >
                   Services
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <li className="row-span-3">
+             
+                <NavigationMenuContent className="bg-white-100 border-none ring-0 shadow-lg">
+                  <ul className="grid gap-2 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <li className="row-span-4">
                       <NavigationMenuLink asChild>
-                        <Link
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          href="/"
-                        >
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            Posta Uganda Services
+                        <div className="flex h-full w-full select-none flex-col justify-end rounded-md p-4 no-underline outline-none focus:shadow-md bg-[url(/images/posta-guy-and-client.png)] bg-cover bg-center relative isolate after:absolute after:bg-gradient-to-tr after:from-black-100 after:-z-10 after:w-full after:h-full after:left-0 after:top-0 overflow-hidden">
+                          <div className="text-sm font-medium text-white-100 mb-2">
+                            Posta Uganda
                           </div>
-                          <p className="text-sm leading-tight text-muted-foreground">
-                            Connecting Uganda through innovative postal and
-                            financial solutions.
+                          <p className="text-xs leading-tight text-white-10/80">
+                            Flexible services, from local post to global
+                            logistics.
                           </p>
-                        </Link>
+                        </div>
                       </NavigationMenuLink>
                     </li>
                     <ListItem
                       href="/services/postal-addresses"
-                      title="Postal Addresses"
+                      title="Postal Addresses Management"
                     >
                       Secure physical and virtual postal addresses
                     </ListItem>
                     <ListItem
                       href="/services/mail-services"
-                      title="Mail Services"
+                      title="Mail Processing"
                     >
                       Reliable local and international mail delivery
                     </ListItem>
                     <ListItem
                       href="/services/express-services"
-                      title="Express Services"
-                    >
-                      Fast and efficient courier services
-                    </ListItem>
-                    <ListItem
-                      href="/services/financial-services"
                       title="Financial Services"
                     >
                       Modern banking and money transfer solutions
                     </ListItem>
-                    <ListItem
-                      href="/services/stamps-philately"
-                      title="Stamps & Philately"
-                    >
-                      Collectible stamps and philatelic items
-                    </ListItem>
-                    <ListItem
-                      href="/services/additional-services"
-                      title="Additional Services"
-                    >
-                      Complementary postal and logistics offerings
-                    </ListItem>
-                    <ListItem
-                      href="/services/property-services"
-                      title="Property Services"
-                    >
-                      Real estate and property management
-                    </ListItem>
+                   <Link href={"/posta-services"} className={cn(buttonVariants({variant:"neutral"}), "flex items-center gap-2 text-xs bg-white-10/40")}>
+                      Explore all our services <ArrowRight className="h-4 w-4"/>
+                   </Link>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger
-                  className={cn(buttonVariants({ variant: "ghost" }))}
-                >
-                  Track & Trace
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <ListItem
-                      href="https://www.eposta.ug/web"
-                      title="Track a Package"
-                      // target="blank"
-                    >
-                      Monitor your shipment's journey in real-time
-                    </ListItem>
-                    <ListItem
-                      href="https://www.eposta.ug/web/register"
-                      title="ePosta Login/Register"
-                      // target="blank"
-                    >
-                      Access your digital postal services account
-                    </ListItem>
-                  </ul>
-                </NavigationMenuContent>
+                <Link href="/about-posta" legacyBehavior passHref>
+                  <NavigationMenuLink
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      buttonVariants({ variant: "ghost" })
+                    )}
+                  >
+                    Track & Trace
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <Link href="/insights" legacyBehavior passHref>
                   <NavigationMenuLink
@@ -177,7 +141,7 @@ const Header: React.FC = () => {
                       buttonVariants({ variant: "ghost" })
                     )}
                   >
-                   New & media
+                    News & media
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -196,24 +160,18 @@ const Header: React.FC = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <div className="hidden md:flex items-center gap-4">
-            <Link
-              href="/contact"
-              className={cn(
-                buttonVariants({ variant: "ghost", size: "sm" }) as string,
-                "text-foreground hover:text-primary"
-              )}
-            >
-              Contact Us
-            </Link>
+          <div className="hidden md:flex items-center gap-2">
             <Link
               href="https://www.eposta.ug/web/register"
-              className={cn(
-                buttonVariants({ variant: "default", size: "sm" }) as string,
-                "bg-primary text-primary-foreground hover:bg-primary/90"
-              )}
+              className={cn(buttonVariants({}))}
             >
-              Create ePosta Account
+              Get an eAdress
+            </Link>
+            <Link
+              href="/contact"
+              className={cn(buttonVariants({ variant: "outline" }))}
+            >
+              Contact Us
             </Link>
           </div>
         </nav>
@@ -225,26 +183,27 @@ const Header: React.FC = () => {
 interface ListItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   title: string;
   children: React.ReactNode;
+  href:string
 }
 
 const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
-  ({ className, title, children, ...props }, ref) => {
+  ({ className, title, children, href }, ref) => {
     return (
       <li>
         <NavigationMenuLink asChild>
-          <a
+          <Link
             ref={ref}
             className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              "block select-none space-y-1 rounded-md py-2 px-4 leading-none no-underline outline-none transition-colors  hover:bg-white-10/30 ",
               className
             )}
-            {...props}
+            href={href}
           >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            <h4 className="text-xs font-medium leading-none">{title}</h4>
+            <p className="line-clamp-2 text-xs leading-snug text-black-10/60">
               {children}
             </p>
-          </a>
+          </Link>
         </NavigationMenuLink>
       </li>
     );

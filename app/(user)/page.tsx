@@ -1,4 +1,3 @@
-
 import About from "@/components/About";
 
 import EPostaSection from "@/components/EPostaServices";
@@ -13,10 +12,11 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Hero />
-      <Services />
       <About />
+      <Services />
+
       <EPostaSection />
-      <MetricsSection/>
+
       <Insights />
       <TestimonialsSection />
       <FAQSection />

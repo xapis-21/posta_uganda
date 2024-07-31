@@ -53,12 +53,12 @@ export function TrackingForm() {
                 <FormControl>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <LuPackageSearch className="h-5 w-5 text-gray-400" />
+                      <LuPackageSearch className="h-5 w-5 text-black-100/20" />
                     </div>
                     <Input
                       placeholder="Enter tracking number"
                       {...field}
-                      className="pl-10 pr-4 py-2 h-12 w-full border-none shadow-none bg-secondary rounded-custom rounded-r-none focus-visible:ring-0 focus:border-transparent"
+                      className="pl-10 pr-4 py-2 h-12 w-full border-none shadow-none bg-white-10/50 rounded-xl rounded-r-none focus-visible:ring-0 focus:border-transparent text-black-100 focus-visible:outline-none"
                       autoComplete="off"
                     />
                   </div>
@@ -68,7 +68,7 @@ export function TrackingForm() {
             )}
           />
         </div>
-        <Button type="submit" size={"lg"} className="rounded-track h-12">
+        <Button type="submit" size={"lg"} className="rounded-l-none h-12">
           Track Package
         </Button>
       </form>

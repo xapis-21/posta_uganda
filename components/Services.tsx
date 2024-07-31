@@ -10,32 +10,32 @@ const Services = () => {
     buttonText: string;
   }[] = [
     {
-      title: "Postal Addresses",
+      title: "Postal Address Management",
       description:
         "Secure and accessible physical and virtual postal addresses for all your mail",
-      link: "/postal-addresses",
-      buttonText: "Apply now",
+      link: "/posta-services/postal-addresses",
+      buttonText: "Manage account",
     },
     {
-      title: "Mail & Parcel Delivery",
+      title: "Mail Processing Services",
       description:
         "Send and receive mail and parcels with confidence, locally and globally.",
-      link: "/mail-parcel-delivery",
-      buttonText: "Send a Package Now",
+      link: "/posta-services/mail-parcel-delivery",
+      buttonText: "Track a package",
     },
     {
-      title: "Express Services",
+      title: "Financial Services",
       description:
         "Swift express delivery to ensure your urgent parcels arrive on time.",
-      link: "/express-services",
-      buttonText: "Book EMS Service",
+      link: "/posta-services/express-services",
+      buttonText: "Make payment",
     },
   ];
 
   return (
-    <section className="py-10">
+    <section className="md:py-16 pb-16 md:pb-32">
       <Container>
-        <div className="py-20 rounded-apple-xl bg-secondary-foreground flex flex-col md:flex-row items-center gap-4 md:gap-10 justify-center px-2 md:px-8 ">
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-10 justify-around px-2 md:px-8 w-full">
           {services.map(({ title, description, link, buttonText }) => (
             <FeaturedServiceCard
               title={title}
