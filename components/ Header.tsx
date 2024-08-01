@@ -97,19 +97,19 @@ const Header: React.FC = () => {
                       </NavigationMenuLink>
                     </li>
                     <ListItem
-                      href="/services/postal-addresses"
+                      href="/posta-services?service=address"
                       title="Postal Addresses Management"
                     >
                       Secure physical and virtual postal addresses
                     </ListItem>
                     <ListItem
-                      href="/services/mail-services"
+                      href="/posta-services?service=mail"
                       title="Mail Processing"
                     >
                       Reliable local and international mail delivery
                     </ListItem>
                     <ListItem
-                      href="/services/express-services"
+                      href="/posta-services?service=finance"
                       title="Financial Services"
                     >
                       Modern banking and money transfer solutions
@@ -128,7 +128,7 @@ const Header: React.FC = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/about-posta" legacyBehavior passHref>
+                <Link href="/https://eposta.ug/" legacyBehavior passHref>
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),

@@ -368,3 +368,224 @@ export const team = [
     image: "/images/team/avatar.jpg"
   },
 ];
+
+export const services = [
+  {
+    title: "Postal Services",
+    excerpt:
+      "Reliable and affordable mail services for sending letters, parcels, and small packets within Uganda and worldwide.",
+    subServices: [
+      {
+        title: "Domestic and International Mail",
+        excerpt:
+          "Sending letters, parcels, and small packets within Uganda and to destinations worldwide.",
+      },
+      {
+        title: "Bulk Mail",
+        excerpt:
+          "Cost-effective bulk mail solutions for businesses and organizations.",
+      },
+      {
+        title: "Post Office Boxes",
+        excerpt:
+          "Secure post office box rental for convenient mail and package receipt.",
+      },
+      {
+        title: "Express Mail Service (EMS)",
+        excerpt:
+          "Fast and reliable domestic and international courier service for documents and merchandise.",
+      },
+      {
+        title: "Posta Parcel",
+        excerpt:
+          "Parcel delivery service for sending items within Uganda and abroad.",
+      },
+    ],
+  },
+  {
+    title: "Financial Services",
+    excerpt:
+      "Accessible financial services, including agency banking and mobile money, provided at post office locations nationwide.",
+    subServices: [
+      {
+        title: "Agency Banking",
+        excerpt:
+          "Access to banking services, including deposits, withdrawals, and fund transfers, at post office locations.",
+      },
+      {
+        title: "Mobile Money",
+        excerpt:
+          "Sending, receiving, and managing money through mobile phone services.",
+      },
+      {
+        title: "EUROGIRO Financial Supermarket",
+        excerpt:
+          "International money transfer services in partnership with EUROGIRO network.",
+      },
+    ],
+  },
+  {
+    title: "E-Government Services",
+    excerpt:
+      "Online access to public services, including passport applications, tax payments, and more.",
+    subServices: [],
+  },
+  {
+    title: "Philately and Stamps",
+    excerpt:
+      "Wide range of postage stamps for collectors and customers, including definitive, commemorative, and special issues.",
+    subServices: [],
+  },
+  {
+    title: "Real Estate Services",
+    excerpt:
+      "Rental of Posta Uganda's properties, including office spaces, commercial premises, and residential units.",
+    subServices: [],
+  },
+  {
+    title: "Transport and Logistics Management",
+    excerpt:
+      "Transportation of mail, parcels, and other postal items between various Posta offices and branches nationwide.",
+    subServices: [
+      {
+        title: "Posta Bus",
+        excerpt:
+          "Intercity bus service for transporting mail, parcels, and passengers between different regions and cities.",
+      },
+    ],
+  },
+];
+
+export const featured = [
+  {
+    title: "Address Management Services",
+    excerpt:
+      "A core service provided within the eNamPost digital mailing solution, focusing on managing postal address issuance, renewal, and monitoring. This service ensures efficient handling of rented postal addresses, allowing for smooth operations and effective allocation of addresses to clients.",
+    subServices: [
+      {
+        title: "Postal Address Management",
+        excerpt:
+          "The service encompasses the management of both physical postal addresses and digital postal addresses. Clients have the option to rent either a Physical Postal Address or a digital Postal Address, depending on their specific needs. The rental process involves issuing, renewing, and monitoring the rented addresses.",
+      },
+      {
+        title: "Physical Postal Address",
+        excerpt:
+          "Clients can rent a Physical Postal Address, which provides them with a physical location for receiving mail. The ePost system facilitates the issuance and renewal of physical postal addresses to clients.",
+      },
+      {
+        title: "Electronic Postal Address",
+        excerpt:
+          "The service introduces the concept of digital postal addresses, which serve as a new revenue-generating product for the post office. Digital addresses have the advantage of not being limited by physical space or logistics constraints.",
+      },
+      {
+        title: "Rental Monitoring and Enforcement",
+        excerpt:
+          "Box Rental Services include monitoring the rental status of postal addresses. In cases where renters default on their payments or fail to renew their rental agreements, the system takes appropriate action to ensure the efficient allocation of addresses. Defaulting renters may have their postal addresses removed, making them available for allocation to other interested clients.",
+      },
+    ],
+  },
+  {
+    title: "Mail Processing Service",
+    excerpt:
+      "The mail processing service enables clients to send mail items to recipients, both domestically and internationally. Clients provide the necessary details to the post officer, these may include the mail class, type, destination, and weight. The tracking number is assigned and the System generates charges, and stamps of the corresponding value and a receipt capturing the mail details and charges is issued to the client.",
+    subServices: [
+      {
+        title: "Book Mail",
+        excerpt:
+          "Provides functionality that allows for the booking of mail items for dispatch through the eNamPost system.",
+      },
+      {
+        title: "Collections",
+        excerpt:
+          "The collections feature maintains a record of transaction amounts generated under a user account. A user then is able to transfer the transaction amounts generated under their account to the strong room.",
+      },
+      {
+        title: "Stamp Stock Management Service",
+        excerpt:
+          "The Stamp Stock Management module within the digital mail solution is designed to handle the management and sale of postage stamps, which serve as the currency for paying for post office mailing services.",
+      },
+    ],
+  },
+  {
+    title: "Express Mail Service (EMS)",
+    excerpt:
+      "A core service offered within the Posta, providing expedited and reliable domestic and international courier services. It is designed to ensure fast and secure delivery of documents and packages across borders, offering key features that enhance the efficiency and convenience of international shipments.",
+    subServices: [
+      {
+        title: "Fast Delivery",
+        excerpt:
+          "EMS prioritizes the swift delivery of international shipments. While the exact transit time varies depending on the destination, EMS generally provides faster delivery compared to regular postal services. This feature enables customers to send time-sensitive items with confidence.",
+      },
+      {
+        title: "Global Coverage",
+        excerpt:
+          "The EMS service extends its reach across numerous countries, often facilitated through partnerships between postal administrations. This global coverage ensures that customers can send and receive packages to and from various locations worldwide, allowing for seamless international connectivity.",
+      },
+    ],
+  },
+  {
+    title: "Financial Services",
+    excerpt:
+      "Posta Uganda offers a range of financial services to promote financial inclusion and provide convenient access to financial transactions for its clients.",
+    subServices: [
+      {
+        title: "EURO GIRO",
+        excerpt:
+          "EURO GIRO is a global community of postal and financial organizations, bridging the digital and physical world. It is an international electronic funds transfer system between the postal services of the member countries. Posta Uganda has partnered with EUROGIRO to offer remittance services through the EUROGIRO FINANCIAL SUPERMARKET, including mobile money transfers, agency banking, and international money transfers.",
+      },
+      {
+        title: "Mobile Money",
+        excerpt:
+          "Posta Uganda offers mobile money services at all its office stations throughout the country. This initiative allows individuals, especially in remote areas, to easily access mobile money services and conduct transactions conveniently at their nearest Posta office. By making such services available nationwide, Posta Uganda contributes to bridging the gap in financial services accessibility.",
+      },
+      {
+        title: "Agency Banking",
+        excerpt:
+          "Posta Uganda operates in the agency banking sector, having partnerships with various banks throughout the country. This service is widely available across different regions, providing customers with convenient access to banking services through Posta Uganda's extensive network. Customers can perform various banking transactions such as deposits, withdrawals, fund transfers, and other financial services at Posta Uganda outlets.",
+      },
+    ],
+  },
+];
+
+export const other = [
+  {
+    title: "Corporate Client Service",
+    excerpt:
+      "A solution for efficient mail movement within corporate entities, providing a seamless process for collecting, processing, and delivering mail.",
+  },
+  {
+    title: "Notification Service (instacom)",
+    excerpt:
+      "Facilitates sending, management, and monitoring of user notifications through various channels like SMS, email, and push notifications.",
+  },
+  {
+    title: "Govmail Service",
+    excerpt:
+      "A digital platform for optimizing physical mail delivery and communication within government ministries, departments, and agencies.",
+  },
+  {
+    title: "Last-Mile Delivery Service (postcom)",
+    excerpt:
+      "Focuses on the final leg of the delivery process, ensuring prompt and reliable delivery of parcels and mail items.",
+  },
+  {
+    title: "Billing Service (Govbill)",
+    excerpt:
+      "A user-friendly platform for streamlining billing, payment collection, and fund accounting processes for government MDAs.",
+  },
+  {
+    title: "B2B (e-Commerce)",
+    excerpt:
+      "Enables the sale of goods or services through online transactions between wholesalers, manufacturers, distributors, and other B2B sellers.",
+  },
+  {
+    title: "e-Government Services",
+    excerpt:
+      "A centralized platform that simplifies access to government services, enabling citizens to interact with multiple departments through a single sign-on mechanism.",
+  },
+  {
+    title: "Unstructured Supplementary Service Data (USSD)",
+    excerpt:
+      "Extends postal services to last-mile users without internet access, enabling access to Posta Uganda services on smartphones and Katitiki phones.",
+  },
+];
