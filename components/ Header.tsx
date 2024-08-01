@@ -128,7 +128,7 @@ const Header: React.FC = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/https://eposta.ug/" legacyBehavior passHref>
+                <Link href="https://eposta.ug/" legacyBehavior passHref>
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
