@@ -44,6 +44,7 @@ const ContactForm = () => {
       email: "",
       message: "",
       name: "",
+      phone: ""
     },
   });
 
@@ -96,6 +97,25 @@ const ContactForm = () => {
                         className="bg-white/60"
                         placeholder="johndoe@example.com"
                         type="email"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Phone number</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        disabled={isPending}
+                        className="bg-white/60"
+                        placeholder="+00 100 002220"
+                        type="tel"
                       />
                     </FormControl>
                     <FormMessage />

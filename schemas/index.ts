@@ -4,6 +4,9 @@ export const MessageSchema = z.object({
   email: z.string().email({
     message: "Email is required",
   }),
+  phone: z.string().email({
+    message: "Email is required",
+  }),
   message: z
     .string({
       required_error: "Message is required",
