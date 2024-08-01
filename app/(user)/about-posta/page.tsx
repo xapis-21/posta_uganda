@@ -122,8 +122,24 @@ const AboutPage = () => {
               A visionary team of experienced professionals
             </h3>
           </div>
+          <div className="flex flex-col items-center justify-center gap-8">
+            {team.slice(0, 1).map((t) => (
+              <TeamMember image={t.image} name={t.name} title={t.role} />
+            ))}
+          </div>
+
+          <div className="flex flex-col md:grid md:grid-cols-4 justify-center gap-8">
+            {team.slice(1, 5).map((t) => (
+              <TeamMember image={t.image} name={t.name} title={t.role} />
+            ))}
+          </div>
+          <div className="flex flex-col items-center justify-center gap-8">
+            {team.slice(5, 6).map((t) => (
+              <TeamMember image={t.image} name={t.name} title={t.role} />
+            ))}
+          </div>
           <div className="flex flex-col md:grid md:grid-cols-5 justify-center gap-8">
-            {team.map((t) => (
+            {team.slice(6, team.length).map((t) => (
               <TeamMember image={t.image} name={t.name} title={t.role} />
             ))}
           </div>
