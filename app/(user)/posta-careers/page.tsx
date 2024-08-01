@@ -54,10 +54,10 @@ const CareerPage = () => {
           <div className="w-full pt-12 md:pt-16">
             <div className="flex flex-col md:flex-row gap-8 justify-between mt-12 md:mt-20">
               <div className="space-y-2">
-                <h1 className="self-stretch font-bold text-primary text-sm">
+                <h1 className="self-stretch font-bold text-primary">
                   Careers & Opportunities
                 </h1>
-                <h2 className="text-3xl md:text-4xl max-w-3xl font-semibold text-foreground leading-tight">
+                <h2 className="text-4xl md:text-4xl max-w-3xl font-semibold text-foreground leading-tight">
                   Join Our Team at Posta Uganda
                 </h2>
               </div>
@@ -70,7 +70,7 @@ const CareerPage = () => {
                 </span> */}
               </p>
             </div>
-            <div className="w-full max-h-[400px] rounded-custom mt-12">
+            <div className="w-full max-h-[400px] rounded-2xl mt-12">
               <Image
                 src={
                   "https://images.pexels.com/photos/6169126/pexels-photo-6169126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -78,13 +78,13 @@ const CareerPage = () => {
                 alt=""
                 width={1000}
                 height={400}
-                className="rounded-apple-xl w-full max-h-[300px] object-cover object-top"
+                className="rounded-2xl w-full max-h-[300px] object-cover object-top"
               />
             </div>
           </div>
         </Container>
       </section>
-      <section className="mt-8 md:pt-16">
+      <section className="mt-8 md:pt-12">
         <Container>
           <Bids />
         </Container>
@@ -96,9 +96,9 @@ const CareerPage = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {reasons.map((reason, index) => (
-              <Card key={index} className="shadow-none border-none bg-muted">
+              <Card key={index} className="shadow-none border-none bg-white-10">
                 <CardHeader>
-                  <CardTitle>{reason.title}</CardTitle>
+                  <CardTitle className="text-base">{reason.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm">{reason.description}</p>
